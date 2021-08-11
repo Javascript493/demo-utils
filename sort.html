@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 选择排序
+    const arr = [6,8,43,2,34,1,10]
+    function sortDemo(data) {
+      if(typeof data === 'object' && data){
+        const len = data.length
+        for(let i = 0; i < len - 1; i++){
+          let min = data[i]
+          for(let j = i+1; j < len;j++) {
+            if(min> data[j]){
+              // 进行交换
+              [data[j], min] = [min, data[j]]
+            }
+          }
+          data[i] = min // 
+        }
+        return data
+      } else {
+        return data
+      }
+    }
+    // console.log(sortDemo(arr))
+
+    // 冒泡排序
+    const arr1 = [6,8,43,2,34,1,10]
+    function sortDemo1(data) {
+      const arr = data
+      if(typeof data === 'object' && data){
+        const len = data.length
+        for(let i = 0; i<len-1; i++) {
+          let status = true  // 当无状态变化时 以及排序完成
+          for(let j = 0; j<len-i-1; j++) {
+            if(arr[j]>arr[j+1]) {
+              status = false;
+              [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+            }
+          }
+          if (status) break
+        }
+      }
+      return arr
+    }
+    console.log(sortDemo1(arr1))
+    
+  </script>
+</body>
+</html>
