@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		var str = 'aaabbbhbkhjkuussddtt'
+
+		function check(s) {
+			if (!s) return
+			const arr = s.split('')
+			const obj = {}
+			let value = null
+			arr.forEach(o => {
+				if (obj[o]) {
+					obj[o]++
+				} else {
+					obj[o] = 1
+				}
+				console.log(obj)
+			});
+			for (key in obj) {
+				if (obj[key] === 1) {
+					value = key
+					break
+				}
+			}
+			return value || false
+		}
+		console.log(check(str))
+	</script>
+</body>
+
+</html>
