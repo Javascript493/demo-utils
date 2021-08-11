@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div >老大的老大</div>
+  <div id="box">老大</div>
+  <div class="box2">老二</div>
+  <script>
+    const dom1 = document.getElementById('box')
+    const nextDom = dom1.nextElementSibling 
+    const previousDom = dom1.previousSibling
+    const previousDom1 = dom1.previousElementSibling
+    // console.log(nextDom)
+    console.log(previousDom,previousDom1)
+  </script>
+</body>
+</html>
