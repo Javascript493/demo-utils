@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="parent">
+    <div class="child">我太惨了等会就要被替换掉了</div>
+  </div>
+  <input id="button" type="button" value="bulid替换"></input>
+<script>
+  var parent = document.getElementById('parent')
+  
+  // 后续被替换的节点
+  var oldDom = document.getElementsByClassName('child')[0] 
+
+  // 创建一个新的节点
+  var newDom = document.createElement('div')
+  newDom.innerHTML = '我是新的一个节点帮之前的给替换了'
+
+  // 触发替换
+  var button = document.getElementById('button')
+  button.addEventListener('click',()=>{
+    parent.replaceChild(newDom, oldDom)
+  },false)
+</script>  
+</body>
+</html>

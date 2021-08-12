@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="one">大哥刘备</div>
+  <div id="two">二第关羽</div>
+  <div id="three">三弟张飞</div>
+  <script>
+    var two = document.getElementById('two')
+    // 获取前一个兄弟node节点
+    console.log(two.previousSibling)
+
+    // 获取前一个兄弟element 节点
+    console.log(two.previousElementSibling)
+
+    // 获取下一个兄弟node节点
+    console.log(two.nextSibling)
+
+    // 获取下一个兄弟element节点
+    console.log(two.nextElementSibling)
+  </script>
+</body>
+</html>

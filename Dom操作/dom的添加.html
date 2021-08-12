@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box0">
+    <div id="son">儿子</div>
+  </div>
+  <div class="box1">2</div>
+  <div class="box2">3</div>
+  <input type="button" id="button" value="插入节点">
+  <script>
+    var button = document.getElementById('button')
+    var box0Dom = document.getElementById('box0')
+    var child = document.getElementById('son')
+    button.addEventListener('click',()=>{
+      var dom = document.createElement('div')
+      dom.innerHTML = '我要变成大儿子'
+      console.log(dom)
+      box0Dom.insertBefore(dom,child)
+    },false)
+  </script>
+</body>
+</html>

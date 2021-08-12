@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="parent">
+    <div class="child">1</div>
+    <div class="child">1</div>
+    <div class="child">1</div>
+    <div class="child">1</div>
+    <div class="child">1</div>
+    <div class="child">1</div>
+    <div class="child">1</div>
+    <div class="child">1</div>
+    末尾文本
+  </div>
+  <script>
+    var parent = document.getElementById('parent')
+    // 返回的只有元素节点
+    console.log(parent.children) 
+
+    // 返回的是一个Node 类数组 
+    console.log(parent.childNodes)
+
+    // 返回子元素第一个node
+    console.log(parent.firstChild)
+
+    // 返回子元素第一个Element
+    console.log(parent.firstElementChild)
+
+    // 返回子元素的末尾node
+    console.log(parent.lastChild)
+
+  </script>
+</body>
+</html>
