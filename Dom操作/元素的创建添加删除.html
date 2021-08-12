@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box">
+    <div>我是第一个子标签</div>
+    <div>我是第二个子标签</div>
+    <div>我是霸霸新带来的一个节点</div>
+    <div>我是第三个子标签</div>
+    <div id="box4">我是第四个子标签</div>
+  </div>
+  <ul id="ul">
+
+  </ul>
+  <script>
+    var dom = document.getElementById('box')
+
+    // 创建一个新节点
+    var newDom = document.createElement('div')
+    newDom.innerHTML = '我是霸霸新带来的一个节点'
+
+    // 创建一个文本节点
+    var newDomText = document.createTextNode('这是一个文本')
+
+     // 克隆一个节点
+    var cloneDom = newDom.cloneNode(false)
+    cloneDom.innerHTML= '我是霸霸新带来的一个节点 克隆这个的'
+
+
+    dom.appendChild(newDom)
+    dom.appendChild(cloneDom)
+    dom.appendChild(newDomText)
+
+    // 批量创建节点
+    var ul = document.getElementById('ul')
+    for(let i = 0;i < 10; i++) {
+      const dom = document.createElement('li')
+      dom.innerHTML= i
+      ul.appendChild(dom)
+    }
+
+
+
+  </script>
+</body>
+</html>
