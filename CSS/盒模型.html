@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .box1{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 20px solid red;
+  }
+  .box2{
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 20px solid red;
+  }
+</style>
+<body>
+  <div class="box1">标准盒子:内容就是所设置的高度</div>
+  <div class="box2">怪异盒子：内容+边框+内边距=高度</div>
+  <h1>盒模型通常就是一个盒子，由内容区，边框，外边框，内边距组成</h1>
+</body>
+</html>

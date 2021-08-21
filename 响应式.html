@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box"></div>
+  <input  type="button" value="修改名字">
+  <script>
+    let status = true
+    var data = {
+      name:'heyunfei'
+    }
+    var nameValue = 'heyunfei'
+    Object.defineProperty(data,'name',{
+      get() {
+        return nameValue
+      },
+      set(newVal) {
+        nameValue = newVal
+      }
+    })
+    document.getElementById('box').innerHTML=data.name
+    console.log(document.getElementsByTagName('input'))
+    document.getElementsByTagName('input')[0].addEventListener('click',()=>{
+      if(status){
+        data.name = '何云飞'
+      } else{
+        document.getElementsByTagName('input')[0].value="改回来"
+        data.name = 'heyunfei'
+      }
+      status = !status
+      console.log(status)
+      document.getElementById('box').innerHTML=data.name
+    })
+  </script>
+</body>
+</html>
